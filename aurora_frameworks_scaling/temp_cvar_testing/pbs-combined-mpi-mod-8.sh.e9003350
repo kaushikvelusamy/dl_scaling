@@ -1,0 +1,133 @@
++ '[' -z '' ']'
++ case "$-" in
++ __lmod_vx=x
++ '[' -n x ']'
++ set +x
+Shell debugging temporarily silenced: export LMOD_SH_DBG_ON=1 for this output (/usr/share/lmod/lmod/init/bash)
+Shell debugging restarted
++ unset __lmod_vx
++ module use /soft/modulefiles
++ '[' -z '' ']'
++ case "$-" in
++ __lmod_sh_dbg=x
++ '[' -n x ']'
++ set +x
+Shell debugging temporarily silenced: export LMOD_SH_DBG_ON=1 for Lmod's output
+Shell debugging restarted
++ unset __lmod_sh_dbg
++ return 0
++ module load frameworks/2023.12.15.001
++ '[' -z '' ']'
++ case "$-" in
++ __lmod_sh_dbg=x
++ '[' -n x ']'
++ set +x
+Shell debugging temporarily silenced: export LMOD_SH_DBG_ON=1 for Lmod's output
+
+The following have been reloaded with a version change:
+  1) oneapi/eng-compiler/2023.12.15.002 => oneapi/release/2023.12.15.001
+
+Shell debugging restarted
++ unset __lmod_sh_dbg
++ return 0
++ module list
++ '[' -z '' ']'
++ case "$-" in
++ __lmod_sh_dbg=x
++ '[' -n x ']'
++ set +x
+Shell debugging temporarily silenced: export LMOD_SH_DBG_ON=1 for Lmod's output
+
+Currently Loaded Modules:
+  1) mpich/icc-all-pmix-gpu/52.2
+  2) mpich-config/collective-tuning/1024
+  3) intel_compute_runtime/release/agama-devel-736.25
+  4) libfabric/1.15.2.0
+  5) cray-pals/1.3.3
+  6) cray-libpals/1.3.3
+  7) spack-pe-gcc/0.6.1-23.275.2
+  8) gmp/6.2.1-pcxzkau
+  9) mpfr/4.2.0-w7v7yjv
+ 10) mpc/1.3.1-dfagrna
+ 11) gcc/12.2.0
+ 12) oneapi/release/2023.12.15.001
+ 13) frameworks/2023.12.15.001
+
+ 
+
+Shell debugging restarted
++ unset __lmod_sh_dbg
++ return 0
++ cd /lus/gila/projects/CSC250STDM10_CNDA/kaushik/all_reduce_bulk_for/may_22_2nd_all_reduce/final/64/final-with-barrier/c-mpi-gpu-4
++ echo Jobid: 9003350.amn-0001
+++ cat /var/spool/pbs/aux/9003350.amn-0001
++ echo Running on nodes x1921c2s4b0n0.hostmgmt2000.cm.americas.sgi.com x1921c2s7b0n0.hostmgmt2000.cm.americas.sgi.com x1921c4s7b0n0.hostmgmt2000.cm.americas.sgi.com x1921c5s0b0n0.hostmgmt2000.cm.americas.sgi.com x1921c5s1b0n0.hostmgmt2000.cm.americas.sgi.com x1921c5s2b0n0.hostmgmt2000.cm.americas.sgi.com x1921c5s3b0n0.hostmgmt2000.cm.americas.sgi.com x1921c5s4b0n0.hostmgmt2000.cm.americas.sgi.com
++ cp /var/spool/pbs/aux/9003350.amn-0001 /home/kaushikvelusamy/
++ chmod 755 /home/kaushikvelusamy/9003350.amn-0001
++ wc -l /home/kaushikvelusamy/9003350.amn-0001
++ NNODES=8
++ RANKS_PER_NODE=12
++ NRANKS=96
++ echo 'NUM_OF_NODES=8  TOTAL_NUM_RANKS=96  RANKS_PER_NODE=12'
++ CPU_BINDING1=list:4:9:14:19:20:25:56:61:66:71:74:79
++ EXT_ENV='--env FI_CXI_DEFAULT_CQ_SIZE=1048576'
++ APP1=/lus/gila/projects/CSC250STDM10_CNDA/kaushik/oneCCL/build/_install/examples/benchmark/benchmark
++ which python
++ mkdir -p ./out_9003350.amn-0001/c_mpi
++ unset ONEAPI_DEVICE_SELECTOR
++ RANKS_PER_NODE=12
++ NRANKS=96
++ for BUF_SIZE in 512 1024 2048 4096 262144 524288 1048576 2097152 4194304
++ date
++ echo 512
++ mpiexec --env FI_CXI_DEFAULT_CQ_SIZE=1048576 --np 96 -ppn 12 --cpu-bind list:4:9:14:19:20:25:56:61:66:71:74:79 ./sycl_gpu 512
++ date
++ echo 512
++ for BUF_SIZE in 512 1024 2048 4096 262144 524288 1048576 2097152 4194304
++ date
++ echo 1024
++ mpiexec --env FI_CXI_DEFAULT_CQ_SIZE=1048576 --np 96 -ppn 12 --cpu-bind list:4:9:14:19:20:25:56:61:66:71:74:79 ./sycl_gpu 1024
++ date
++ echo 1024
++ for BUF_SIZE in 512 1024 2048 4096 262144 524288 1048576 2097152 4194304
++ date
++ echo 2048
++ mpiexec --env FI_CXI_DEFAULT_CQ_SIZE=1048576 --np 96 -ppn 12 --cpu-bind list:4:9:14:19:20:25:56:61:66:71:74:79 ./sycl_gpu 2048
++ date
++ echo 2048
++ for BUF_SIZE in 512 1024 2048 4096 262144 524288 1048576 2097152 4194304
++ date
++ echo 4096
++ mpiexec --env FI_CXI_DEFAULT_CQ_SIZE=1048576 --np 96 -ppn 12 --cpu-bind list:4:9:14:19:20:25:56:61:66:71:74:79 ./sycl_gpu 4096
++ date
++ echo 4096
++ for BUF_SIZE in 512 1024 2048 4096 262144 524288 1048576 2097152 4194304
++ date
++ echo 262144
++ mpiexec --env FI_CXI_DEFAULT_CQ_SIZE=1048576 --np 96 -ppn 12 --cpu-bind list:4:9:14:19:20:25:56:61:66:71:74:79 ./sycl_gpu 262144
++ date
++ echo 262144
++ for BUF_SIZE in 512 1024 2048 4096 262144 524288 1048576 2097152 4194304
++ date
++ echo 524288
++ mpiexec --env FI_CXI_DEFAULT_CQ_SIZE=1048576 --np 96 -ppn 12 --cpu-bind list:4:9:14:19:20:25:56:61:66:71:74:79 ./sycl_gpu 524288
++ date
++ echo 524288
++ for BUF_SIZE in 512 1024 2048 4096 262144 524288 1048576 2097152 4194304
++ date
++ echo 1048576
++ mpiexec --env FI_CXI_DEFAULT_CQ_SIZE=1048576 --np 96 -ppn 12 --cpu-bind list:4:9:14:19:20:25:56:61:66:71:74:79 ./sycl_gpu 1048576
++ date
++ echo 1048576
++ for BUF_SIZE in 512 1024 2048 4096 262144 524288 1048576 2097152 4194304
++ date
++ echo 2097152
++ mpiexec --env FI_CXI_DEFAULT_CQ_SIZE=1048576 --np 96 -ppn 12 --cpu-bind list:4:9:14:19:20:25:56:61:66:71:74:79 ./sycl_gpu 2097152
++ date
++ echo 2097152
++ for BUF_SIZE in 512 1024 2048 4096 262144 524288 1048576 2097152 4194304
++ date
++ echo 4194304
++ mpiexec --env FI_CXI_DEFAULT_CQ_SIZE=1048576 --np 96 -ppn 12 --cpu-bind list:4:9:14:19:20:25:56:61:66:71:74:79 ./sycl_gpu 4194304
++ date
++ echo 4194304

@@ -1,0 +1,41 @@
+Jobid: 9003350.amn-0001
+Running on nodes x1921c2s4b0n0.hostmgmt2000.cm.americas.sgi.com x1921c2s7b0n0.hostmgmt2000.cm.americas.sgi.com x1921c4s7b0n0.hostmgmt2000.cm.americas.sgi.com x1921c5s0b0n0.hostmgmt2000.cm.americas.sgi.com x1921c5s1b0n0.hostmgmt2000.cm.americas.sgi.com x1921c5s2b0n0.hostmgmt2000.cm.americas.sgi.com x1921c5s3b0n0.hostmgmt2000.cm.americas.sgi.com x1921c5s4b0n0.hostmgmt2000.cm.americas.sgi.com
+8 /home/kaushikvelusamy/9003350.amn-0001
+NUM_OF_NODES=8  TOTAL_NUM_RANKS=96  RANKS_PER_NODE=12
+/opt/aurora/23.275.2/frameworks/aurora_nre_models_frameworks-2024.0/bin/python
+Fri 31 May 2024 06:21:02 PM UTC
+512
+Fri 31 May 2024 06:21:14 PM UTC
+512
+Fri 31 May 2024 06:21:14 PM UTC
+1024
+Fri 31 May 2024 06:21:20 PM UTC
+1024
+Fri 31 May 2024 06:21:20 PM UTC
+2048
+Fri 31 May 2024 06:21:25 PM UTC
+2048
+Fri 31 May 2024 06:21:25 PM UTC
+4096
+Fri 31 May 2024 06:21:30 PM UTC
+4096
+Fri 31 May 2024 06:21:30 PM UTC
+262144
+Fri 31 May 2024 06:21:35 PM UTC
+262144
+Fri 31 May 2024 06:21:35 PM UTC
+524288
+Fri 31 May 2024 06:21:40 PM UTC
+524288
+Fri 31 May 2024 06:21:40 PM UTC
+1048576
+Fri 31 May 2024 06:21:46 PM UTC
+1048576
+Fri 31 May 2024 06:21:46 PM UTC
+2097152
+Fri 31 May 2024 06:21:56 PM UTC
+2097152
+Fri 31 May 2024 06:21:56 PM UTC
+4194304
+Fri 31 May 2024 06:22:12 PM UTC
+4194304
